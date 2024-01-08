@@ -42,6 +42,9 @@ body {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
+section {
+  padding-left: 130px;
+}
 
 .main {
   /*color: #363940;*/
@@ -54,12 +57,17 @@ body {
   font-weight: 500;
   line-height: 68px; /* 117.241% */
   margin-bottom: 30px;
+  width: 459px;
 }
-.main.text{
+.main.text {
   margin-bottom: 40px;
+  width: 380px;
 }
 .main-img {
-
+  width: 656px;
+  height: 650px;
+  border-radius: 10px 10px 0 0;
+  background: lightgray 50% / cover no-repeat;
 }
 
 .text {
@@ -67,7 +75,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px; /* 137.5% */
-
 }
 .button {
   width: 152px;
@@ -95,10 +102,10 @@ body {
 input,
 select,
 fieldset,
-textarea{
+textarea {
   border-radius: 4px;
- padding: 14px 15px;
-  border: 1px solid #95A1BB;
+  padding: 14px 15px;
+  border: 1px solid #95a1bb;
 }
 input,
 select,
@@ -113,23 +120,26 @@ textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px; /* 140% */
-    font-family: inherit;
+  font-family: inherit;
 }
-input[type="email"],input[type="password"],input[type="date"],select{
-    width: 230px;
-    height: 50px;
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 230px;
+  height: 50px;
 }
-fieldset{
-width: 100%;
-    padding: 30px 15px;
+fieldset {
+  width: 100%;
+  padding: 30px 15px;
 }
-textarea{
-    width: 100%;
-min-height: 80px;
-    resize:none;
+textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: none;
 }
-form.button{
-    width: 100%;
+form.button {
+  width: 100%;
 }
 .title {
   color: #363940;
@@ -137,9 +147,12 @@ form.button{
   font-weight: 500;
   line-height: 43px; /* 134.375% */
 }
+.rates-section.title {
 
+}
 .table {
   border-collapse: collapse;
+  margin-left: 230px;
 }
 th,
 td {
@@ -199,7 +212,7 @@ td {
 .create-account-section.title {
   margin-bottom: 50px;
 }
-.create-account-section.text{
+.create-account-section.text {
   margin-bottom: 40px;
   width: 500px;
 }
@@ -211,28 +224,178 @@ td {
   margin-bottom: 15px;
   list-style-image: url("./assets/images/check.svg");
 }
-form{
+form {
   width: 100%;
   max-width: 500px;
 }
-select{
+select {
   background: url(./assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
   appearance: none;
 }
-input [type="date"]::-webkit-calendar-picker-indicator{
+input [type="date"]::-webkit-calendar-picker-indicator {
   background: url(./assets/images/Calendar.svg) no-repeat;
 }
-footer{
+footer {
   text-align: center;
   padding: 20px 0;
- background-color: #0A61F7;
+  background-color: #0a61f7;
 }
-small{
-  color: #FFF;
+small {
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px; /* 157.143% */
 }
-input[type="text"]{
-  width: 100%;
+input [type="text"] {
+  width: 100%
+}
+
+/*input[type="radio"] {*/
+/*  !*background: url(./assets/images/Icon-checked.svg) no-repeat center;*!*/
+/*  -webkit-appearance: none;*/
+/*  -moz-appearance: none;*/
+/*  appearance: none;*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  border-radius: 50%;*/
+/*  border: 1px solid black;*/
+/*  outline: none;*/
+/*  transition: 0.5s;*/
+/*}*/
+
+/*input[type="radio"]:checked {*/
+/*  background: url(./assets/images/Icon-checked.svg) no-repeat center;*/
+/*  border-color: red;*/
+/*  !*background-color: #2196f3;*!*/
+/*}*/
+/* для элемента input c type="checkbox" */
+
+
+.custom-checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #95A1BB;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox>input:focus+span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+  border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("./assets/images/checkbox-checked.svg");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+  background-color: #e9ecef;
+}
+
+
+/*radiobutton*/
+
+/* для элемента input c type="radio" */
+.custom-radio>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio>span::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  transition: 1.5s
+}
+
+/* стили при наведении курсора на радио */
+.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio>input:focus+span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio>input:focus:not(:checked)+span::before {
+  border-color: #80bdff;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio>input:checked+span::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("./assets/images/Icon-checked.svg");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio>input:disabled+span::before {
+  background-color: #e9ecef;
 }
