@@ -59,17 +59,29 @@ section {
   margin-bottom: 30px;
   width: 459px;
 }
-.main.text {
+.main .text {
   margin-bottom: 40px;
+}
+h1 + p {
   width: 380px;
 }
 .main-img {
   width: 656px;
   height: 650px;
   border-radius: 10px 10px 0 0;
-  background: lightgray 50% / cover no-repeat;
-}
+  border: 5px dotted red;
+  display: inline;
+  padding: 5px 5px 5px 5px;
+  margin-right: 130px;
+  margin-top: 50px;
 
+  }
+.rates-section h2 {
+  text-align: center;
+}
+.rates-section p {
+  text-align: center;
+}
 .text {
   color: #95a1bb;
   font-size: 16px;
@@ -138,7 +150,7 @@ textarea {
   min-height: 80px;
   resize: none;
 }
-form.button {
+form .button {
   width: 100%;
 }
 .title {
@@ -147,12 +159,13 @@ form.button {
   font-weight: 500;
   line-height: 43px; /* 134.375% */
 }
-.rates-section.title {
+.rates-section .title {
 
 }
 .table {
   border-collapse: collapse;
-  margin-left: 230px;
+  margin-left: auto;
+  margin-right: auto;
 }
 th,
 td {
@@ -208,13 +221,17 @@ td {
 .create-account-section {
   padding-bottom: 100px;
   padding-top: 100px;
+
 }
-.create-account-section.title {
+.create-account-section .title {
   margin-bottom: 50px;
+  width: 385px;
+
 }
-.create-account-section.text {
+.create-account-section .text {
   margin-bottom: 40px;
   width: 500px;
+  text-align: justify;
 }
 .list {
 }
@@ -227,6 +244,7 @@ td {
 form {
   width: 100%;
   max-width: 500px;
+
 }
 select {
   background: url(./assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
