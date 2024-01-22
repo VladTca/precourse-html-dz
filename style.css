@@ -7,13 +7,13 @@
 a {
   text-decoration: none;
 }
-a:hover{
+a:hover {
   text-decoration: underline;
 }
 ul {
   list-style: none;
 }
-.container{
+.container {
   height: 100%;
   width: 100%;
   max-width: 1170px;
@@ -27,6 +27,7 @@ html,
 body {
   font-family: "Rubik", sans-serif;
   font-style: normal;
+  min-width: 375px;
 }
 
 .header {
@@ -43,29 +44,27 @@ body {
   text-transform: uppercase;
 }
 section {
-
 }
-.header-wrapper{
+.header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu{
+.menu {
   display: flex;
   gap: 24px;
 }
-.main-wrapper{
+.main-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 800px;
+  min-height: 800px;
 }
 .main {
   /*color: #363940;*/
   /*margin: 252px 811px 412px 130px*/
 }
-.main-info{
-
+.main-info {
 }
 .main-title {
   color: #363940;
@@ -75,10 +74,9 @@ section {
   margin-bottom: 10px;
   width: 459px;
 }
-.account-info-wrapper{
-
+.account-info-wrapper {
 }
-.account-wrapper{
+.account-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -89,7 +87,7 @@ section {
 /*h1 + p {*/
 /*  width: 380px;*/
 /*}*/
-.rates-wrapper{
+.rates-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,8 +101,8 @@ section {
   padding: 5px 5px 5px 5px;
   margin-right: 130px;
   margin-top: 50px;
-align-self: flex-end;
-  }
+  align-self: flex-end;
+}
 /*.rates-section h2 {*/
 /*  text-align: center;*/
 /*}*/
@@ -120,36 +118,37 @@ align-self: flex-end;
   margin-top: 20px;
 }
 button {
-  border:none;
+  border: none;
   background-color: transparent;
   cursor: pointer;
   transition: 1s;
 }
-.button{
+.button {
   width: 152px;
   height: 50px;
   border-radius: 4px;
-  background: #0A61F7;
+  background: #0a61f7;
   font-size: 14px;
-  color: #FFF;
+  color: #fff;
   font-weight: 500;
   line-height: 19.6px; /* 140% */
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
-button:hover{
+button:hover {
   transform: translateY(-5px);
 }
 .rates-section {
   background: #f9fafc;
   padding: 100px 0;
 }
-.rates-section.title {
+.rates-section .title {
   margin-bottom: 20px;
 }
-.rates-section.text {
+.rates-section .text {
   margin-bottom: 40px;
+  text-align: center;
 }
 input,
 select,
@@ -183,11 +182,12 @@ select {
   flex-grow: 1;
   cursor: pointer;
 }
-fieldset{
+fieldset {
   width: 100%;
   padding: 30px 15px;
 }
-.stack, fieldset{
+.stack,
+fieldset {
   display: flex;
   column-gap: 30px;
 }
@@ -205,7 +205,7 @@ form .button {
   font-weight: 500;
   line-height: 43px; /* 134.375% */
 }
-.fields-wrapper{
+.fields-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -269,12 +269,10 @@ td {
 .create-account-section {
   padding-bottom: 100px;
   padding-top: 100px;
-
 }
 .create-account-section .title {
   margin-bottom: 50px;
   width: 385px;
-
 }
 .create-account-section .text {
   margin-bottom: 40px;
@@ -294,13 +292,13 @@ form {
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap:20px
+  gap: 20px;
 }
 select {
   background: url(./assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
   appearance: none;
 }
-input [type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator {
   background: url(./assets/images/Calendar.svg) no-repeat;
 }
 footer {
@@ -314,53 +312,32 @@ small {
   font-weight: 400;
   line-height: 22px; /* 157.143% */
 }
-input [type="text"] {
-  width: 100%
+input[type="text"] {
+  width: 100%;
 }
 
-/*input[type="radio"] {*/
-/*  !*background: url(./assets/images/Icon-checked.svg) no-repeat center;*!*/
-/*  -webkit-appearance: none;*/
-/*  -moz-appearance: none;*/
-/*  appearance: none;*/
-/*  width: 20px;*/
-/*  height: 20px;*/
-/*  border-radius: 50%;*/
-/*  border: 1px solid black;*/
-/*  outline: none;*/
-/*  transition: 0.5s;*/
-/*}*/
-
-/*input[type="radio"]:checked {*/
-/*  background: url(./assets/images/Icon-checked.svg) no-repeat center;*/
-/*  border-color: red;*/
-/*  !*background-color: #2196f3;*!*/
-/*}*/
-/* для элемента input c type="checkbox" */
-
-
-.custom-checkbox>input {
+.custom-checkbox > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox>span {
+.custom-checkbox > span {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox>span::before {
-  content: '';
+.custom-checkbox > span::before {
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #95A1BB;
+  border: 1px solid #95a1bb;
   border-radius: 2px;
   margin-right: 0.5em;
   background-repeat: no-repeat;
@@ -369,58 +346,57 @@ input [type="text"] {
 }
 
 /* стили при наведении курсора на checkbox */
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
   border-color: #b3d7ff;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
-.custom-checkbox>input:not(:disabled):active+span::before {
+.custom-checkbox > input:not(:disabled):active + span::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox>input:focus+span::before {
+.custom-checkbox > input:focus + span::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox>input:focus:not(:checked)+span::before {
+.custom-checkbox > input:focus:not(:checked) + span::before {
   border-color: #80bdff;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox>input:checked+span::before {
+.custom-checkbox > input:checked + span::before {
   border-color: #0b76ef;
   background-color: #0b76ef;
   background-image: url("./assets/images/checkbox-checked.svg");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox>input:disabled+span::before {
+.custom-checkbox > input:disabled + span::before {
   background-color: #e9ecef;
 }
-
 
 /*radiobutton*/
 
 /* для элемента input c type="radio" */
-.custom-radio>input {
+.custom-radio > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
 /* для элемента label связанного с .custom-radio */
-.custom-radio>span {
+.custom-radio > span {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
 /* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio>span::before {
-  content: '';
+.custom-radio > span::before {
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -432,38 +408,98 @@ input [type="text"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
-  transition: 1.5s
+  transition: 1.5s;
 }
 
 /* стили при наведении курсора на радио */
-.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+.custom-radio > input:not(:disabled):not(:checked) + span:hover::before {
   border-color: #b3d7ff;
 }
 
 /* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio>input:not(:disabled):active+span::before {
+.custom-radio > input:not(:disabled):active + span::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
 }
 
 /* стили для радиокнопки, находящейся в фокусе */
-.custom-radio>input:focus+span::before {
+.custom-radio > input:focus + span::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio>input:focus:not(:checked)+span::before {
+.custom-radio > input:focus:not(:checked) + span::before {
   border-color: #80bdff;
 }
 
 /* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio>input:checked+span::before {
+.custom-radio > input:checked + span::before {
   border-color: #0b76ef;
   background-color: #0b76ef;
   background-image: url("./assets/images/Icon-checked.svg");
 }
 
 /* стили для радиокнопки, находящейся в состоянии disabled */
-.custom-radio>input:disabled+span::before {
+.custom-radio > input:disabled + span::before {
   background-color: #e9ecef;
+}
+.menu-icon {
+  display:none;
+}
+
+@media screen and (max-width: 1400px) {
+  .main-wrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .main-info {
+    align-self: flex-start;
+    margin: 100px 0 80px;
+  }
+  .main-img {
+    align-self: center;
+  }
+  .table {
+    width: 940px;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 940px;
+  }
+  .account-wrapper {
+    flex-direction: column;
+    gap: 70px
+  }
+  .create-account-section .text {
+    max-width: unset;
+  }
+  form {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu {
+    display:none;
+  }
+  .menu-icon{
+    display: block;
+  }
+  .main-info{
+    margin: 60px 0;
+  }
+  .main-title{
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .account-wrapper{
+    gap:60px;
+  }
+  label {
+    white-space: nowrap
+  }
+  fieldset {
+  flex-wrap: wrap;
+    row-gap: 20px;
+  }
 }

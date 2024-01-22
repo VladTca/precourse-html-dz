@@ -22,7 +22,7 @@
       <div class="container">
         <div class="header-wrapper">
           <a href="" class="logo">
-            <img src="assets/images/logo.svg" alt="Image"/>
+            <img src="assets/images/logo.svg" alt="Image" />
           </a>
           <ul class="menu">
             <li>
@@ -35,20 +35,27 @@
               <a href="" class="menu-link">Create Account</a>
             </li>
           </ul>
+          <img
+            class="menu-icon"
+            src="./assets/images/menu-burger.svg"
+            alt="menu-icon"
+          />
         </div>
       </div>
     </header>
     <section class="main">
       <div class="container">
         <div class="main-wrapper">
-          <div class="main-info"><h1 class="main-title">Markup achievement</h1>
+          <div class="main-info">
+            <h1 class="main-title">Markup achievement</h1>
             <p class="text">
-              The harder you work for something, the greater you’ll feel when you
-              achieve it.
+              The harder you work for something, the greater you’ll feel when
+              you achieve it.
             </p>
             <button class="button">Learn More</button>
           </div>
-          <img class="main-img" src="./assets/images/image.png" alt="image"/></div>
+          <img class="main-img" src="./assets/images/image.png" alt="image" />
+        </div>
       </div>
     </section>
     <section class="rates-section">
@@ -59,46 +66,49 @@
             Failure will never overtake me if my determination to succeed is
             strong enough.
           </p>
-          <table class="table">
-            <tr>
-              <th class="table-subtitle gray">Features</th>
-              <th class="table-title">Standart</th>
-              <th class="table-title">Plus</th>
-              <th class="table-title">PRO</th>
-            </tr>
-            <tr>
-              <th class="table-subtitle">Theory</th>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-            </tr>
-            <tr>
-              <th class="table-subtitle">Practice</th>
-              <td><img src="./assets/images/close.svg" alt=""/></td>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-            </tr>
-            <tr>
-              <th class="table-subtitle">Code review</th>
-              <td><img src="./assets/images/close.svg" alt=""/></td>
-              <td><img src="./assets/images/close.svg" alt=""/></td>
-              <td><img src="./assets/images/check.svg" alt=""/></td>
-            </tr>
-            <tr class="table-footer">
-              <th class="table-subtitle">
-                <a href="" class="table-link">Have questions?</a>
-              </th>
-              <td>
-                <button class="table-button">get now</button>
-              </td>
-              <td>
-                <button class="table-button active">get now</button>
-              </td>
-              <td>
-                <button class="table-button">get now</button>
-              </td>
-            </tr>
-          </table>
+
+          <div class="table-wrapper">
+            <table class="table">
+              <tr>
+                <th class="table-subtitle gray">Features</th>
+                <th class="table-title">Standart</th>
+                <th class="table-title">Plus</th>
+                <th class="table-title">PRO</th>
+              </tr>
+              <tr>
+                <th class="table-subtitle">Theory</th>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+              </tr>
+              <tr>
+                <th class="table-subtitle">Practice</th>
+                <td><img src="./assets/images/close.svg" alt="" /></td>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+              </tr>
+              <tr>
+                <th class="table-subtitle">Code review</th>
+                <td><img src="./assets/images/close.svg" alt="" /></td>
+                <td><img src="./assets/images/close.svg" alt="" /></td>
+                <td><img src="./assets/images/check.svg" alt="" /></td>
+              </tr>
+              <tr class="table-footer">
+                <th class="table-subtitle">
+                  <a href="" class="table-link">Have questions?</a>
+                </th>
+                <td>
+                  <button class="table-button">get now</button>
+                </td>
+                <td>
+                  <button class="table-button active">get now</button>
+                </td>
+                <td>
+                  <button class="table-button">get now</button>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -108,12 +118,12 @@
           <div class="account-info-wrapper">
             <h2 class="title">Create your free account</h2>
             <p class="text">
-              Let us first talk about dreams. We all know that dreams do play a role
-              in our daily lives. The majority of people pay little attention to
-              dreams. Dreams can help us find solutions to our daily problems and
-              see things from a different perspective. Whenever we are dreaming, we
-              can be who or what we want to be, regardless of the fact that in real
-              life.
+              Let us first talk about dreams. We all know that dreams do play a
+              role in our daily lives. The majority of people pay little
+              attention to dreams. Dreams can help us find solutions to our
+              daily problems and see things from a different perspective.
+              Whenever we are dreaming, we can be who or what we want to be,
+              regardless of the fact that in real life.
             </p>
             <ul class="list">
               <li class="list-item">Easy setup, fast start</li>
@@ -123,26 +133,37 @@
           </div>
 
           <form action="">
-            <input type="text" placeholder="Full name"/>
-            <div class="fields-wrapper"><input type="email" placeholder="Email"/>
-              <input type="password" placeholder="Password"/>
-              <input type="date"/>
+            <label>
+              <input type="text" placeholder="Full name" />
+            </label>
+            <div class="fields-wrapper">
 
-              <select>
-                <option selected disabled>Counry</option>
-                <option>Belarus</option>
-                <option>China</option>
-                <option>USA</option>
-              </select></div>
+                <input type="email" placeholder="Email" />
+
+
+                <input type="password" placeholder="Password" />
+
+                <input type="date" />
+
+
+
+                <select>
+                  <option selected disabled>Counry</option>
+                  <option>Belarus</option>
+                  <option>China</option>
+                  <option>USA</option>
+                </select>
+
+            </div>
 
             <div class="stack">
               <label class="custom-radio" for="front">
-                <input id="front" type="radio" name="stack" checked/>
+                <input id="front" type="radio" name="stack" checked />
                 <span>Frontend</span>
               </label>
 
               <label class="custom-radio" for="back">
-                <input id="back" type="radio" name="stack"/>
+                <input id="back" type="radio" name="stack" />
                 <span>Backend</span>
               </label>
             </div>
@@ -150,28 +171,30 @@
             <fieldset>
               <legend>Favorite Technologies</legend>
               <label class="custom-checkbox" for="html">
-                <input id="html" type="checkbox" name="html" checked/>
+                <input id="html" type="checkbox" name="html" checked />
                 <span>HTML</span>
               </label>
               <label class="custom-checkbox" for="css">
-                <input id="css" type="checkbox" name="css" checked/>
+                <input id="css" type="checkbox" name="css" checked />
                 <span>CSS</span>
               </label>
               <label class="custom-checkbox" for="react">
-                <input id="react" type="checkbox" name="react"/>
+                <input id="react" type="checkbox" name="react" />
                 <span>React</span>
               </label>
               <label class="custom-checkbox" for="sc">
-                <input id="sc" type="checkbox" name="sc"/>
+                <input id="sc" type="checkbox" name="sc" />
                 <span>Styled components</span>
               </label>
             </fieldset>
 
-            <textarea placeholder="Something else about you..."></textarea>
+            <label>
+              <textarea placeholder="Something else about you..."></textarea>
+            </label>
             <button class="button" type="submit">Registration</button>
-<!--            <input type="submit" value="Registration"/>-->
+            <!--            <input type="submit" value="Registration"/>-->
 
-<!--            &lt;!&ndash;        mogno i button vmestgo imput&ndash;&gt;-->
+            <!--            &lt;!&ndash;        mogno i button vmestgo imput&ndash;&gt;-->
           </form>
         </div>
       </div>
